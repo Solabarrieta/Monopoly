@@ -32,6 +32,6 @@ hashFiles('**/pom.xml') }}
  restore-keys: ${{ runner.os }}-m2
  - name: Build and analyze
  env:
- GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+ GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
  run: mvn clean org.jacoco:jacoco-maven-plugin:prepareagent org.jacoco:jacoco-maven-plugin:report install sonar:sonar
